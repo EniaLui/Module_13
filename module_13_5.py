@@ -7,13 +7,14 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 api = "тут ключ от бота"
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
-keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
-keyboard.add(KeyboardButton("Рассчитать"), KeyboardButton("Информация"))
 
 class UserState(StatesGroup):
     age = State()
     growth = State()
     weight = State()
+
+    keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
+    keyboard.add(KeyboardButton("Рассчитать"), KeyboardButton("Информация"))
 
     @dp.message_handler(commands=['start'])
     async def start(message: types.Message):
