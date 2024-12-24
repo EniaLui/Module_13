@@ -4,7 +4,7 @@ from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-api = "7501195936:AAFX38VsGr1Birsl-ieYcuT6wv3TJCnKoTE"
+api = "тут ключ от бота"
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
